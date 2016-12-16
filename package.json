@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/duino/asynccode.git"
+    "url": "git+https://github.com/jorritd/async-code"
   },
   "keywords": [
     "json",
@@ -16,7 +16,7 @@
   ],
   "author": "Jorrit Duin",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/duino/asynccode#readme",
+  "homepage": "https://github.com/jorritd/async-code",
   "eslintConfig": {
     "rules": {
       "indent": [
