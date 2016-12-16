@@ -1,0 +1,55 @@
+{
+  "name": "AsyncCode",
+  "version": "0.0.1",
+  "description": "Make a code block async, overcome the 'max call stack exceeded' error",
+  "main": "asyncCode",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/duino/asynccode.git"
+  },
+  "keywords": [
+    "json",
+    "compress"
+  ],
+  "author": "Jorrit Duin",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/duino/asynccode#readme",
+  "eslintConfig": {
+    "rules": {
+      "indent": [
+        2,
+        2
+      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "linebreak-style": [
+        2,
+        "unix"
+      ],
+      "semi": [
+        2,
+        "always"
+      ]
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "amd": true,
+      "node": true
+    },
+    "globals": {
+    },
+    "extends": "eslint:recommended",
+    "plugins": [
+      "security"
+    ]
+  },
+  "dependencies": {
+    "requirejs": "^2.3.1"
+  }
+}
