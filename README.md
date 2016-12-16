@@ -5,7 +5,7 @@ Creates a new call stack for a code block
 For use in nodejs:
 
 ```
-npm install async-code --save
+npm install asynccode --save
 ```
 
 

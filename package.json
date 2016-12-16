@@ -1,5 +1,5 @@
 {
-  "name": "AsyncCode",
+  "name": "asynccode",
   "version": "0.0.1",
   "description": "Make a code block async, overcome the 'max call stack exceeded' error",
   "main": "asyncCode",

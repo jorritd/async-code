@@ -1,0 +1,124 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/jd/local/bin/node',
+1 verbose cli   '/home/jd/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@4.0.5
+3 info using node@v6.9.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/jd/dev/async-code',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/jd/.npm/AsyncCode/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /home/jd/.npm correctMkdir not in flight; initializing
+10 info lifecycle AsyncCode@0.0.1~prepublish: AsyncCode@0.0.1
+11 silly lifecycle AsyncCode@0.0.1~prepublish: no script for prepublish, continuing
+12 info lifecycle AsyncCode@0.0.1~prepare: AsyncCode@0.0.1
+13 silly lifecycle AsyncCode@0.0.1~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/home/jd/.npm/AsyncCode/0.0.1/package.tgz',
+14 verbose tar pack   '/home/jd/dev/async-code' ]
+15 verbose tarball /home/jd/.npm/AsyncCode/0.0.1/package.tgz
+16 verbose folder /home/jd/dev/async-code
+17 verbose addLocalTarball adding from inside cache /home/jd/.npm/AsyncCode/0.0.1/package.tgz
+18 verbose correctMkdir /home/jd/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd AsyncCode@0.0.1
+20 verbose afterAdd /home/jd/.npm/AsyncCode/0.0.1/package/package.json not in flight; writing
+21 verbose correctMkdir /home/jd/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /home/jd/.npm/AsyncCode/0.0.1/package/package.json written
+23 silly publish { name: 'AsyncCode',
+23 silly publish   version: '0.0.1',
+23 silly publish   description: 'Make a code block async, overcome the \'max call stack exceeded\' error',
+23 silly publish   main: 'asyncCode',
+23 silly publish   scripts: { test: 'node test/test.js' },
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/jorritd/async-code.git' },
+23 silly publish   keywords: [ 'json', 'compress' ],
+23 silly publish   author: { name: 'Jorrit Duin' },
+23 silly publish   license: 'ISC',
+23 silly publish   homepage: 'https://github.com/jorritd/async-code',
+23 silly publish   eslintConfig:
+23 silly publish    { rules:
+23 silly publish       { indent: [Object],
+23 silly publish         quotes: [Object],
+23 silly publish         'linebreak-style': [Object],
+23 silly publish         semi: [Object] },
+23 silly publish      env: { es6: true, browser: true, amd: true, node: true },
+23 silly publish      globals: {},
+23 silly publish      extends: 'eslint:recommended',
+23 silly publish      plugins: [ 'security' ] },
+23 silly publish   dependencies: { requirejs: '^2.3.1' },
+23 silly publish   readme: '# asyncCode\n\nCreates a new call stack for a code block\n\nFor use in nodejs:\n\n```\nnpm install async-code --save\n```\n\n\nNow for every async code block\'\n\n```\n/* uncomment for use with nodejs */\n// var requirejs = require(\'requirejs\');\n// requirejs.config({\n//   nodeRequire: require\n// });\n\nrequirejs([\'../asyncCode\'],function(async){\n  var max = 1024 * 1024;\n  var i = 0;\n\n  var next = function(){\n    if(i < max){\n      async(function(){\n        Math.sqrt(i);\n        i++;\n        next();\n      });\n    }else{\n      console.log(\'ready\'); // eslint-disable-line\n    }\n  };\n  next();\n});\n\n```\n\n```\nconst myAsyncFunc = function(callback){\n  // Function scope/codeblock\n  asyncCode(\n    // This is executed in another code block\n    function(){\n      // Do your async thing\n      // ....\n      // .....\n      callback(\'ok\');\n    }\n  );\n  return this;\n}\n\n\n```\n',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   gitHead: 'e59636772cb4a0013f89564cae4217c9ed8c3a87',
+23 silly publish   bugs: { url: 'https://github.com/jorritd/async-code/issues' },
+23 silly publish   _id: 'AsyncCode@0.0.1',
+23 silly publish   _shasum: 'ba3158da7cb4b57ed17c3c67618627e1a2780433',
+23 silly publish   _from: '.' }
+24 info lifecycle AsyncCode@0.0.1~prepublishOnly: AsyncCode@0.0.1
+25 silly lifecycle AsyncCode@0.0.1~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name AsyncCode
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'AsyncCode',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'AsyncCode',
+30 silly mapToRegistry   name: 'AsyncCode',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/AsyncCode
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /home/jd/.npm/AsyncCode/0.0.1/package.tgz
+34 verbose request uri https://registry.npmjs.org/AsyncCode
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 2:40:59 PM
+37 verbose request using bearer token for auth
+38 verbose request id dfb347aaa77cd183
+39 http request PUT https://registry.npmjs.org/AsyncCode
+40 http 400 https://registry.npmjs.org/AsyncCode
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '55',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Fri, 16 Dec 2016 13:41:00 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-lhr6337-LHR',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1481895660.018602,VS0,VE731',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating /home/jd/.npm/registry.npmjs.org/AsyncCode on PUT
+43 error publish Failed PUT 400
+44 verbose stack Error: "name must be lower case" : AsyncCode
+44 verbose stack     at makeError (/home/jd/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/home/jd/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/home/jd/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/home/jd/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/home/jd/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/home/jd/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 400
+46 verbose pkgid AsyncCode
+47 verbose cwd /home/jd/dev/async-code
+48 error Linux 4.8.0-30-generic
+49 error argv "/home/jd/local/bin/node" "/home/jd/local/bin/npm" "publish"
+50 error node v6.9.2
+51 error npm  v4.0.5
+52 error code E400
+53 error "name must be lower case" : AsyncCode
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
