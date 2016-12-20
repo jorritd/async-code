@@ -1,6 +1,6 @@
 {
   "name": "asynccode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Make a code block async, overcome the 'max call stack exceeded' error",
   "main": "asynccode.js",
   "scripts": {
