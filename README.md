@@ -18,13 +18,14 @@ Now for every async code block'
 //   nodeRequire: require
 // });
 
-requirejs(['../asyncCode'],function(async){
+requirejs(['../asynccode'],function(async){
   var max = 1024 * 1024;
   var i = 0;
 
   var next = function(){
     if(i < max){
       async(function(){
+        // .. do your async thing
         Math.sqrt(i);
         i++;
         next();
